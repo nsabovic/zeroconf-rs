@@ -34,10 +34,10 @@ serde_json = "1.0.107"
 clap = { version = "4.4.4", features = ["derive"] }
 
 [target.'cfg(unix)'.dependencies]
-avahi-sys = "0.10.0"
+avahi-sys = { git = "https://github.com/nsabovic/avahi-sys.git", branch = "bindgen" }
 
 [target.'cfg(target_vendor = "apple")'.dependencies]
-bonjour-sys = "0.1.0"
+bonjour-sys = { git = "https://github.com/nsabovic/bonjour-sys.git", branch = "bindgen" }
 
 [package.metadata.docs.rs]
 default-target = "x86_64-unknown-linux-gnu"
